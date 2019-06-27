@@ -5,13 +5,13 @@ export default class Filter extends Component {
     
     render = () =>
     (
-        <View style={this.props.style}>
-            <Text style={styles.title}>Filter</Text>
+        <View style={this.props.style.filterBG}>
+            <Text style={styleOverride.title}>Filter</Text>
         </View>
     );   
 }
 
-const styles = StyleSheet.create({
+const styleOverride = StyleSheet.create({
     filter:{
         backgroundColor:"#62B1B3",
         height:50,
@@ -21,6 +21,6 @@ const styles = StyleSheet.create({
       },
       title:{
         fontSize:50,
-        justifyContent:'top'
+        // justifyContent:'top'
       }
 });

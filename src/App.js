@@ -21,7 +21,7 @@ state ={
           
       <View style={styles.vertLayoutContainer } >
         {/* <Text>Filter</Text> */}
-        <Filter style={styles.filterWrapper}>
+        <Filter style={styles}>
         </Filter>
         <View //separator
           style={{
@@ -79,6 +79,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 16
   },
+
+  filterBG:{
+    backgroundColor: "#DA70D6"
+  }
   
 });
 
