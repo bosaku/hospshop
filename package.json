@@ -20,15 +20,18 @@
   "dependencies": {
     "google-spreadsheet": "^2.0.7",
     "modal-enhanced-react-native-web": "^0.2.0",
+    "modal-react-native-web": "^0.2.0",
     "react": "^16.6.x",
     "react-app-polyfill": "^0.1.3",
     "react-art": "^16.6.x",
     "react-dom": "^16.6.x",
     "react-native": "^0.60.4",
-    "react-native-elements": "^1.0.0-beta8",
+    "react-native-elements": "^1.1.0",
+    "react-native-popup-menu": "^0.15.6",
     "react-native-super-grid": "^3.0.4",
     "react-native-vector-icons": "^6.6.0",
-    "react-native-web": "^0.10.x",
+    "react-native-web": "^0.9.13",
+    "react-native-web-lists": "^0.1.1",
     "react-router-dom": "^5.0.1",
     "read-excel-file": "^4.0.1"
   },
@@ -92,5 +95,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "optionalDependencies": {}
 }

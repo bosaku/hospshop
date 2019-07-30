@@ -16,20 +16,6 @@
     border-radius: .3em; 
     border-width: 1px; 
     border-color: #daf7ff
-   /* border: 2; */
-   /* padding:20; */
-   /* border-color: red;
-   border-width: 2;
-   border-radius: 20;
-   overflow: hidden; */
-   /* padding: 20; */
-   /* margin-t: 10;  */
-   /* margin: 10; */
-   /* margin-right: 10
-   /* justify-self: center; */
-   
-   /* text-align: center; */
-   
 }
 
 .procedureShortName {
@@ -74,10 +60,46 @@
   align-items:  center;
   justify-content:center;
 
-  background-color: rgba(222, 224, 205, 0.685);
+  background-color: rgba(223, 223, 223, 0.685);
   border-radius: .3em; 
   border-width: 1px; 
   border-color: #daf7ff
+}
+
+.hospitalListItemOuter{
+  flex:1;
+  flex-direction:row;
+  padding: 1px;
+}
+
+.horizontalFlexContainer{
+  flex:1;
+  flex-direction:row;
+  
+}
+
+.hospitalListTitleRatingContainer{
+  flex:1;
+  flex-direction:row;
+  padding: 5px;
+}
+
+.hospitalListItemBorder {
+  /* padding:.5em; */
+  
+  /* background-color: rgba(249, 255, 195, 0.685); */
+    border-radius: .3em; 
+    border-width: 1px; 
+    border-color: #4d4d4d
+}
+
+.centeredText{
+  padding: 5px;
+}
+
+.hospitalListItemPriceText {
+  /* text-align: start; */
+  padding: 5px;
 }
 
 .verticalContainer {
@@ -105,5 +127,45 @@
   /*margin-left: 10; 
   justify-content: center;
    margin: 100; */
+}
+
+.filterControlContainer{
+  flex-direction : row;
+  flex: 1;
+}
+
+.italic{
+  font-style:italic;
+  text-decoration: underline;
+}
+
+.procedurePopupMenu {
+  display: 'flex';
+  flex:1;
+  align-items: center;
+  justify-content: center;
+  padding: 100;
+}
+
+.procedureSearchbarButton {
+  justify-content: center;
+}
+
+.procedureModal {
+  background-color: lavender;
+  padding: 22px;
+  justify-content: "center";
+  align-items: center;
+  border-radius: 4px;
+  border-color: "rgba(0,0,0,1)";
+}
+
+.mapContainer {
+  width: 400px;
+  height: 500px;
+  background-color: rgba(249, 255, 195, 0.685);
+  border-radius: .3em; 
+  border-width: 1px; 
+  border-color: #daf7ff
 }
 
