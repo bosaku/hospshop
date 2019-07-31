@@ -1,0 +1,232 @@
+[
+    {
+      "CPTCodes": " 85025",
+      "LAB TESTS": "Lab test - Complete blood count with differential (CBCw/diff) ",
+      "Price": "$81.75"
+    },
+    {
+      "CPTCodes": " 80048",
+      "LAB TESTS": "Lab test - Basic metabolic panel",
+      "Price": "$85.25"
+    },
+    {
+      "CPTCodes": " 80053",
+      "LAB TESTS": "Lab test - Comprehensive metabolic panel",
+      "Price": "$96.81"
+    },
+    {
+      "CPTCodes": " 85610 ",
+      "LAB TESTS": "Lab test - Prothrombin time",
+      "Price": ""
+    },
+    {
+      "CPTCodes": "$51.09",
+      "LAB TESTS": " ",
+      "Price": ""
+    },
+    {
+      "CPTCodes": " 84443",
+      "LAB TESTS": "Lab test - Thyroid stimulating hormone (TSH)",
+      "Price": "$102.10"
+    },
+    {
+      "CPTCodes": " 86850",
+      "LAB TESTS": "Lab test - Antibody screen",
+      "Price": "$80.81"
+    },
+    {
+      "CPTCodes": " 86901",
+      "LAB TESTS": "Lab test - Blood typing RH factor",
+      "Price": "$36.84"
+    },
+    {
+      "CPTCodes": " 86900",
+      "LAB TESTS": "Lab test - Blood typing ABO",
+      "Price": "$42.97"
+    },
+    {
+      "CPTCodes": " 85027",
+      "LAB TESTS": "Lab test - Complete blood count without differential (CBC)",
+      "Price": "$53.62"
+    },
+    {
+      "CPTCodes": " 80061",
+      "LAB TESTS": "Lab test - Lipid panel",
+      "Price": "$119.56"
+    },
+    {
+      "CPTCodes": " 80076",
+      "LAB TESTS": "Lab test - Liver function",
+      "Price": "$85.25"
+    },
+    {
+      "CPTCodes": " 83690",
+      "LAB TESTS": "Lab test - Lipase",
+      "Price": "$98.86"
+    },
+    {
+      "CPTCodes": " 81001",
+      "LAB TESTS": "Lab test urinalysis",
+      "Price": "$54.98"
+    },
+    {
+      "CPTCodes": " 36415",
+      "LAB TESTS": "Blood draw",
+      "Price": "$15.58"
+    },
+    {
+      "CPTCodes": " ",
+      "LAB TESTS": "",
+      "Price": ""
+    },
+    {
+      "CPTCodes": " ",
+      "LAB TESTS": " ",
+      "Price": ""
+    },
+    {
+      "CPTCodes": "CPTCodes",
+      "LAB TESTS": "",
+      "Price": ""
+    },
+    {
+      "CPTCodes": "HEART TEST",
+      "LAB TESTS": "Price",
+      "Price": ""
+    },
+    {
+      "CPTCodes": " ",
+      "LAB TESTS": "",
+      "Price": ""
+    },
+    {
+      "CPTCodes": " 93005",
+      "LAB TESTS": "Electrocardiogram (heart rhythm test)",
+      "Price": ""
+    },
+    {
+      "CPTCodes": "$151.89",
+      "LAB TESTS": " ",
+      "Price": ""
+    },
+    {
+      "CPTCodes": " ",
+      "LAB TESTS": " ",
+      "Price": " "
+    },
+    {
+      "CPTCodes": "CPTCodes ",
+      "LAB TESTS": "IMAGING (X-Ray)",
+      "Price": "Price "
+    },
+    {
+      "CPTCodes": " 71045",
+      "LAB TESTS": "Chest X-ray 1 view",
+      "Price": "$188.03"
+    },
+    {
+      "CPTCodes": " 71046",
+      "LAB TESTS": "Chest Xray - 2 views ",
+      "Price": "$197.46"
+    },
+    {
+      "CPTCodes": " ",
+      "LAB TESTS": " ",
+      "Price": " "
+    },
+    {
+      "CPTCodes": "CPTCodes ",
+      "LAB TESTS": "INJECTIONS AND IV",
+      "Price": "Price "
+    },
+    {
+      "CPTCodes": " 96372",
+      "LAB TESTS": "Therapeutic injection, intramuscular or subcutaneous",
+      "Price": "$43.84"
+    },
+    {
+      "CPTCodes": " 96374",
+      "LAB TESTS": "Therapeutic injection, intravenous push",
+      "Price": ""
+    },
+    {
+      "CPTCodes": "$203.47",
+      "LAB TESTS": " ",
+      "Price": ""
+    },
+    {
+      "CPTCodes": " 96375",
+      "LAB TESTS": "Therapeutic injection, intravenous push, each additional",
+      "Price": ""
+    },
+    {
+      "CPTCodes": "$97.59",
+      "LAB TESTS": " ",
+      "Price": ""
+    },
+    {
+      "CPTCodes": " ",
+      "LAB TESTS": " ",
+      "Price": " "
+    },
+    {
+      "CPTCodes": "CPTCodes ",
+      "LAB TESTS": "LUNG TEST OR TREATMENT",
+      "Price": ""
+    },
+    {
+      "CPTCodes": "Price ",
+      "LAB TESTS": " ",
+      "Price": ""
+    },
+    {
+      "CPTCodes": " 94770",
+      "LAB TESTS": "Respiratory therapy - exhaled carbon dioxide test ",
+      "Price": "$134.72"
+    },
+    {
+      "CPTCodes": " 94640",
+      "LAB TESTS": "Respiratory therapy - inhalation treatment for airway obstruction",
+      "Price": "$77.32"
+    },
+    {
+      "CPTCodes": " ",
+      "LAB TESTS": " ",
+      "Price": " "
+    },
+    {
+      "CPTCodes": "CPTCodes ",
+      "LAB TESTS": "MAMMOGRAM",
+      "Price": ""
+    },
+    {
+      "CPTCodes": "Price ",
+      "LAB TESTS": " ",
+      "Price": ""
+    },
+    {
+      "CPTCodes": " 77067",
+      "LAB TESTS": "Mammography screening, digital bilateral",
+      "Price": "$131.35"
+    },
+    {
+      "CPTCodes": " 77063",
+      "LAB TESTS": "Breast Tomosynthesis screening, bilateral (add on to Mammogram)",
+      "Price": "$12.19"
+    },
+    {
+      "CPTCodes": " ",
+      "LAB TESTS": " ",
+      "Price": " "
+    },
+    {
+      "CPTCodes": "CPTCodes ",
+      "LAB TESTS": "PATHOLOGY ",
+      "Price": "Price "
+    },
+    {
+      "CPTCodes": "88305 ",
+      "LAB TESTS": "Surgical pathology, Level IV",
+      "Price": "$157.56"
+    }
+   ]

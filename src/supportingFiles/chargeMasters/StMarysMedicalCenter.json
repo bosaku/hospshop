@@ -1,0 +1,302 @@
+[
+    {
+      "CPTCodes": " 36415",
+      "LAB TESTS": "Venipuncture (blood draw)",
+      "Price": "$16.31"
+    },
+    {
+      "CPTCodes": " 85025",
+      "LAB TESTS": "Lab test - Complete blood count with differential (CBCw/diff) ",
+      "Price": "$37.14"
+    },
+    {
+      "CPTCodes": " 80048",
+      "LAB TESTS": "Lab test - Basic metabolic panel",
+      "Price": "$37.45"
+    },
+    {
+      "CPTCodes": " 80053",
+      "LAB TESTS": "Lab test - Comprehensive metabolic panel",
+      "Price": "$48.48"
+    },
+    {
+      "CPTCodes": " 85610 ",
+      "LAB TESTS": "Lab test - Prothrombin time",
+      "Price": ""
+    },
+    {
+      "CPTCodes": "$23.84",
+      "LAB TESTS": " ",
+      "Price": ""
+    },
+    {
+      "CPTCodes": " 84443",
+      "LAB TESTS": "Lab test - Thyroid stimulating hormone (TSH)",
+      "Price": "$51.42"
+    },
+    {
+      "CPTCodes": " 82565 ",
+      "LAB TESTS": "Lab test - Creatinine",
+      "Price": "$33.25"
+    },
+    {
+      "CPTCodes": " 82963",
+      "LAB TESTS": "Lab test - Blood glucose monitoring",
+      "Price": "$28.88"
+    },
+    {
+      "CPTCodes": " 84484",
+      "LAB TESTS": "Lab test - Troponin",
+      "Price": "$64.96"
+    },
+    {
+      "CPTCodes": " 87086 ",
+      "LAB TESTS": "Lab test - Urine culture",
+      "Price": "$60.66"
+    },
+    {
+      "CPTCodes": " 80061",
+      "LAB TESTS": "Lab test - Lipid panel",
+      "Price": "$43.75"
+    },
+    {
+      "CPTCodes": " 81001",
+      "LAB TESTS": "Lab test - urinalysis with microscopy",
+      "Price": ""
+    },
+    {
+      "CPTCodes": "$31.50",
+      "LAB TESTS": " ",
+      "Price": ""
+    },
+    {
+      "CPTCodes": " ",
+      "LAB TESTS": " ",
+      "Price": " "
+    },
+    {
+      "CPTCodes": "CPTCodes ",
+      "LAB TESTS": "G.I. PROCEDURES",
+      "Price": "Price "
+    },
+    {
+      "CPTCodes": "45378 ",
+      "LAB TESTS": "Colonoscopy screening",
+      "Price": "$3,228.05"
+    },
+    {
+      "CPTCodes": " ",
+      "LAB TESTS": " ",
+      "Price": " "
+    },
+    {
+      "CPTCodes": "CPTCodes",
+      "LAB TESTS": "",
+      "Price": ""
+    },
+    {
+      "CPTCodes": "HEART TEST",
+      "LAB TESTS": "Price",
+      "Price": ""
+    },
+    {
+      "CPTCodes": " ",
+      "LAB TESTS": "",
+      "Price": ""
+    },
+    {
+      "CPTCodes": " 93005",
+      "LAB TESTS": "Electrocardiogram (heart rhythm test)",
+      "Price": ""
+    },
+    {
+      "CPTCodes": "$150.50",
+      "LAB TESTS": " ",
+      "Price": ""
+    },
+    {
+      "CPTCodes": " ",
+      "LAB TESTS": " ",
+      "Price": " "
+    },
+    {
+      "CPTCodes": "CPTCodes ",
+      "LAB TESTS": "IMAGING (X-Ray)",
+      "Price": "Price "
+    },
+    {
+      "CPTCodes": "70450",
+      "LAB TESTS": "CT Scan head/brain without contrast",
+      "Price": "$1,092.04"
+    },
+    {
+      "CPTCodes": " 71250",
+      "LAB TESTS": "CT Scan chest without contrast",
+      "Price": "$1,092.04"
+    },
+    {
+      "CPTCodes": " 74176",
+      "LAB TESTS": "CT Scan abdomen and pelvis without contrast",
+      "Price": "$2,180.19"
+    },
+    {
+      "CPTCodes": " 72125",
+      "LAB TESTS": "CT Scan cervical spine without contrast",
+      "Price": "$1,092.04"
+    },
+    {
+      "CPTCodes": " 70551",
+      "LAB TESTS": "MRI brain without contrast",
+      "Price": "$2,083.73"
+    },
+    {
+      "CPTCodes": " 72141",
+      "LAB TESTS": "MRI cervical spine (neck) without contrast",
+      "Price": "$2,083.73"
+    },
+    {
+      "CPTCodes": " 72148 ",
+      "LAB TESTS": "MRI lumbar spine (lower back) without contrast",
+      "Price": "$2,083.73"
+    },
+    {
+      "CPTCodes": " 73721",
+      "LAB TESTS": "MRI lower extremity joint (knee or ankle) unilateral without contrast ",
+      "Price": "$2,083.73"
+    },
+    {
+      "CPTCodes": " 72100",
+      "LAB TESTS": "X-ray lumbar spine (low back) 2-3 ",
+      "Price": "$310.24"
+    },
+    {
+      "CPTCodes": " 71045",
+      "LAB TESTS": "X-ray chest 1 view",
+      "Price": "$202.62"
+    },
+    {
+      "CPTCodes": " 71046",
+      "LAB TESTS": "X-ray chest - 2 views",
+      "Price": "$202.62"
+    },
+    {
+      "CPTCodes": " 73030",
+      "LAB TESTS": "X-ray shoulder unilateral - minimum 2 views",
+      "Price": "$162.09"
+    },
+    {
+      "CPTCodes": " 73110",
+      "LAB TESTS": "X-ray wrist unilateral - minimum 3 views",
+      "Price": "$148.58"
+    },
+    {
+      "CPTCodes": " 73130",
+      "LAB TESTS": "X-ray hand unilateral - minimum 3 views",
+      "Price": "$148.58"
+    },
+    {
+      "CPTCodes": " 73562",
+      "LAB TESTS": "X-ray knee unilateral - minimum 3 views ",
+      "Price": "$148.58"
+    },
+    {
+      "CPTCodes": " 73610",
+      "LAB TESTS": "X-ray ankle unilateral - minimum 3 views ",
+      "Price": "$148.58"
+    },
+    {
+      "CPTCodes": " 73630",
+      "LAB TESTS": "X-ray foot unilateral - minimum 3 views",
+      "Price": ""
+    },
+    {
+      "CPTCodes": "$148.58",
+      "LAB TESTS": " ",
+      "Price": ""
+    },
+    {
+      "CPTCodes": " ",
+      "LAB TESTS": " ",
+      "Price": " "
+    },
+    {
+      "CPTCodes": "CPTCodes ",
+      "LAB TESTS": "MAMMOGRAM",
+      "Price": ""
+    },
+    {
+      "CPTCodes": "Price ",
+      "LAB TESTS": " ",
+      "Price": ""
+    },
+    {
+      "CPTCodes": " 77067",
+      "LAB TESTS": "Mammography screening, digital bilateral",
+      "Price": "$183.40"
+    },
+    {
+      "CPTCodes": " ",
+      "LAB TESTS": " ",
+      "Price": " "
+    },
+    {
+      "CPTCodes": "CPTCodes ",
+      "LAB TESTS": "PHYSICAL AND OCCUPATIONAL THERAPY",
+      "Price": "Price "
+    },
+    {
+      "CPTCodes": " 97110",
+      "LAB TESTS": "Therapeutic exercise per 15 minutes ",
+      "Price": "$84.77"
+    },
+    {
+      "CPTCodes": " 97112",
+      "LAB TESTS": "Neuromuscular re-education per 15 minutes",
+      "Price": "$110.57"
+    },
+    {
+      "CPTCodes": " 97140",
+      "LAB TESTS": "Manual therapy per 15 minutes",
+      "Price": "$70.04"
+    },
+    {
+      "CPTCodes": " 97530",
+      "LAB TESTS": "Therapeutic activity per 15 minutes",
+      "Price": "$114.42"
+    },
+    {
+      "CPTCodes": " 97162",
+      "LAB TESTS": "Physical therapy evaluation",
+      "Price": "$170.17"
+    },
+    {
+      "CPTCodes": " 97166",
+      "LAB TESTS": "Occupational therapy evaluation ",
+      "Price": "$170.17"
+    },
+    {
+      "CPTCodes": " ",
+      "LAB TESTS": " ",
+      "Price": " "
+    },
+    {
+      "CPTCodes": " CPTCodes",
+      "LAB TESTS": " ULTRASOUND",
+      "Price": "Price"
+    },
+    {
+      "CPTCodes": " 76642",
+      "LAB TESTS": "Breast unilateral, limited study",
+      "Price": "$308.70"
+    },
+    {
+      "CPTCodes": " 76700",
+      "LAB TESTS": "Abdomen, complete study",
+      "Price": "$672.35"
+    },
+    {
+      "CPTCodes": " 76805",
+      "LAB TESTS": "Pregnancy 2nd or 3rd trimester",
+      "Price": "$457.94"
+    }
+   ]
