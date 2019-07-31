@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Main from "./views/main";
 import Info from "./components/info";
 import Results from "./views/results";
-import HospDataConsumer from "./context/hospDataContext.js";
+// import {HospDataConsumer} from "./context/hospDataContext.js";
 ///for dimensionality as context throughout app : https://medium.com/@505aaron/a-practical-react-native-problem-solved-with-the-context-api-eecaf2e05202
 
 class App extends Component {
@@ -23,7 +23,7 @@ class App extends Component {
 
     return (
       <View>
-        <HospDataConsumer>
+        {/* <HospDataConsumer> */}
           <View>
             <BrowserRouter>
               <Switch>
@@ -35,7 +35,7 @@ class App extends Component {
               </Switch>
             </BrowserRouter>
           </View>
-        </HospDataConsumer>
+        {/* </HospDataConsumer> */}
       </View>
     );
   }

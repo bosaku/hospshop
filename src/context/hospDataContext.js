@@ -1,15 +1,23 @@
 
 import React from "react";
+import Dat from "../supportingFiles/codesNdescriptions.json"
+//http://www.convertcsv.com/csv-to-json.htm
+export const DatContext = React.createContext();
 
-const DatContext = React.createContext();
+export const HospDataConsumer = DatContext.Consumer
 
-const hospDataConsumer = DatContext.Consumer
-
-export default class HospDataProvider extends React.Component {
+export class HospDataProvider extends React.Component {
     state = {
         loading:false,
         cptDat:"not yet loaded"
     }    
+
+    
+    componentDidMount() {
+        
+        this.setState({cptDat: Dat})
+            
+    }
 
     searchCPTCodes = (code) => {
        // const dat = require('../supportingFiles/cptCodesTransposedBeauty.json')
@@ -24,10 +32,7 @@ export default class HospDataProvider extends React.Component {
      }
 
     render() {
-        // const value = {
-        //     cptDat: this.state.cptDat,
-        //     loading: this.state.loading
-        // }
+        // this.state.cptDat = ""
 
         return (
             <DatContext.Provider value={this.state}>

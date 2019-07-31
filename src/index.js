@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import  HospDataProvider  from "./context/hospDataContext.js";
+import { HospDataProvider }  from "./context/hospDataContext.js";
 
 ReactDOM.render(
   <HospDataProvider>
