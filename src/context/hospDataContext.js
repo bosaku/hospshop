@@ -9,7 +9,8 @@ export const HospDataConsumer = DatContext.Consumer
 export class HospDataProvider extends React.Component {
     state = {
         loading:false,
-        cptDat:"not yet loaded"
+        cptDat:"not yet loaded",
+        searchResults:""
     }    
 
     
@@ -26,16 +27,25 @@ export class HospDataProvider extends React.Component {
     }
 
     searchByDescription = (desc) => {
-        // const dat = require('../supportingFiles/cptCodesTransposedBeauty.json')
-        //  this.setState({cptDat:"Hello"})
-         console.log("search by desc")
+        const matches = this.state.cptDat.filter(item => {
+            return item.CodeDescription.toLowerCase().includes(desc);
+          });
+      
+          //console.log("context side : results for search ", desc, ": ", matches);
+        
+           this.setState({searchResults:matches})
+        //this.state.searchResults = matches;
+
+        
+        
      }
 
     render() {
         // this.state.cptDat = ""
 
         return (
-            <DatContext.Provider value={this.state}>
+            // <DatContext.Provider value={this.state} runSearch={this.searchBy}>
+            <DatContext.Provider value={{state:this.state, onSearch:this.searchByDescription}}>
                 {this.props.children}
             </DatContext.Provider>
         )

@@ -117,6 +117,7 @@
   top:250px;
 }
 
+
 .horizontalContainer {
   flex-direction : row;
   flex: 1;
@@ -151,11 +152,23 @@
   justify-content: center;
 }
 
-.procedureModal {
+.procedureModalInner {
   background-color: lavender;
   padding: 22px;
   justify-content: "center";
   align-items: center;
+  border-radius: 4px;
+  border-color: "rgba(0,0,0,1)";
+}
+
+.procedureModalOuter {
+  /* flex:1;
+  flex-direction: row; */
+  display: flex;
+  background-color: lavender;
+  padding: 22px;
+  /* justify-content: "center"; */
+  /* align-items: center; */
   border-radius: 4px;
   border-color: "rgba(0,0,0,1)";
 }

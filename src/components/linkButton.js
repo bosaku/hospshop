@@ -11,6 +11,15 @@ import { Linking, Button, View } from "react-native";
 //import "../App.css";
 
 export default class LinkButton extends Component {
+    // state = 
+    // {
+    //   visible: false
+    // }
+    // toggleHidden = () => {
+    //   this.setState({
+    //     visible:this.props.visible
+    //   })
+    // }
 
      onPress = () => {
         this.goToURL()
@@ -27,10 +36,15 @@ export default class LinkButton extends Component {
         })}
 
   render() {
-
+    
+    
       return (
-          
+        
         <View>
+          
+          {/* {console.log("visible on button comp : " + this.props.visible)} */}
+          
+          {/* {this.state.visible &&  */}
           <Button
             onPress={this.onPress}
             title="Find a hospital"
@@ -38,7 +52,9 @@ export default class LinkButton extends Component {
             accessibilityLabel="Click me to filter by location"
           />
         </View>
+        
       )
+    
     }
   }
 
