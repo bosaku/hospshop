@@ -16,8 +16,8 @@ function SearchField(props) {
   const [searchText, updateSearchText] = useState("");
   // const [t, updateTimer] = useState("");
   // const [searching, updateSearching] = useState(false);
-  const hospContextValue = React.useContext(DatContext);
-  let dat = hospContextValue.state.cptDat;
+  const context = React.useContext(DatContext);
+  let dat = context.state.cptDat;
 
   const { modalClicked } = props;
 
@@ -31,21 +31,22 @@ function SearchField(props) {
 
     var timeout = setTimeout(() => {
       console.log("running search")
-      hospContextValue.onSearch(searchText);
+      context.onSearch(searchText);
       //   searchThroughDat(val)
     }, 1000);
     return () => clearTimeout(timeout);
   }, [searchText]);
 
   const handleText = val => {
+    context.state.searchTerm=val
     updateSearchText(val);
   };
 
-  const updateSearchField = () => {
-    return searchText;
-  };
+  // const updateSearchField = () => {
+  //   return searchText;
+  // };
 
-  if (hospContextValue.state.searchResults.length <= 0)
+  // if (hospContextValue.state.searchResults.length <= 0)
     return (
       <View>
         <Text className="inputFieldTitle">Procedure or Diagnosis Search</Text>
@@ -65,49 +66,49 @@ function SearchField(props) {
         </View>
       </View>
     );
-  else {
-    return (
-      <View>
-        {props.displayButton()}
-        <Text className="inputFieldTitle">Procedure or Diagnosis Search</Text>
+  // else {
+  //   return (
+  //     <View>
+  //       {props.displayButton()}
+  //       <Text className="inputFieldTitle">Procedure or Diagnosis Search</Text>
 
-        <View className="textInputBorder">
-          {/* <View className="horizontalFlexContainer"> */}
-          <TextInput
-            placeholder="Procedure Description Search"
-            className="inputField"
-            onChangeText={val => {
-              handleText(val);
-            }}
-            value={updateSearchField()}
-          />
+  //       <View className="textInputBorder">
+  //         {/* <View className="horizontalFlexContainer"> */}
+  //         <TextInput
+  //           placeholder="Procedure Description Search"
+  //           className="inputField"
+  //           onChangeText={val => {
+  //             handleText(val);
+  //           }}
+  //           value={updateSearchField()}
+  //         />
 
-          <Button
-            className="procedureSearchbarButton"
-            onPress={modalClicked}
-            title={
-              "Browse " +
-              hospContextValue.state.searchResults.length +
-              " Matches"
-            }
-          />
+  //         <Button
+  //           className="procedureSearchbarButton"
+  //           onPress={modalClicked}
+  //           title={
+  //             "Browse " +
+  //             hospContextValue.state.searchResults.length +
+  //             " Matches"
+  //           }
+  //         />
 
-          {/* {console.log(
-            "result object",
-            hospContextValue.state.searchResults[0]
-          )} */}
-          <Text>{'Search term : "' + searchText + '"'} </Text>
-          <Text>Description : </Text>
-          <Text>
-            {JSON.stringify(
-              hospContextValue.state.searchResults[0].CodeDescription,
-              null,
-              2
-            )}
-          </Text>
-        </View>
-      </View>
-    );
-  }
+  //         {/* {console.log(
+  //           "result object",
+  //           hospContextValue.state.searchResults[0]
+  //         )} */}
+  //         <Text>{'Search term : "' + searchText + '"'} </Text>
+  //         <Text>Description : </Text>
+  //         <Text>
+  //           {JSON.stringify(
+  //             hospContextValue.state.searchResults[0].CodeDescription,
+  //             null,
+  //             2
+  //           )}
+  //         </Text>
+  //       </View>
+  //     </View>
+  //   );
+  //}
 }
 export default SearchField;

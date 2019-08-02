@@ -1,4 +1,3 @@
-
 import React from "react";
 import Dat from "../supportingFiles/codesNdescriptions.json"
 //http://www.convertcsv.com/csv-to-json.htm
@@ -12,6 +11,7 @@ export class HospDataProvider extends React.Component {
         cptDat:"not yet loaded",
         searchTerm:"",
         searchResults:"",
+        singleResult:"",
         procedureModalClicked:false,
         hospitalModalClicked:false
     }    
@@ -30,18 +30,26 @@ export class HospDataProvider extends React.Component {
         const matches = this.state.cptDat.filter(item => {
             return item.CodeDescription.toLowerCase().includes(desc);
           });
-      
+           this.setState(
+               {
+                   searchResults:matches,
+                   singleResult:matches[0]
+                }
+               )
         
-           this.setState({searchResults:matches})
-        
+           console.log('Context : ', matches)
+     }
+
+     openProcedureModal=(val)=>{
+        this.setState({
+            procedureModalClicked:val
+        })
      }
 
     render() {
-        // this.state.cptDat = ""
-
         return (
             // <DatContext.Provider value={this.state} runSearch={this.searchBy}>
-            <DatContext.Provider value={{state:this.state, onSearch:this.searchByDescription}}>
+            <DatContext.Provider value={{state:this.state, onSearch:this.searchByDescription, procedureModOpen:this.openProcedureModal}}>
                 {this.props.children}
             </DatContext.Provider>
         )

@@ -23,11 +23,7 @@ export default class Main extends Component {
     
   };
 
-  // componentDidMount() {
-  //   console.log("main did mount");
-    
-
-  // }
+  
 
   modalClicked = () => {
     if (!this.state.procedureModalOpen)
@@ -44,6 +40,14 @@ export default class Main extends Component {
     this.buttonVisible =true;
   };
 
+  displayResults(){
+    if(this.context.state.searchResults)
+    return(
+      
+      <ResultsWidget/>
+    )
+  }
+
   render() {
     return (
       <View>
@@ -55,7 +59,7 @@ export default class Main extends Component {
           <ProcedurePopup
             title={this.context.procedureTitle}
             longDescription={this.state.procedureDescription}
-            modalVisible={this.state.procedureModalOpen}
+            modalVisible={this.context.state.procedureModalOpen}
             modalClicked={this.modalClicked}
           />
 
@@ -66,7 +70,7 @@ export default class Main extends Component {
               modalClicked={this.modalClicked}
               displayButton={this.displayFindHospitalButton}
             />
-            {this.context.searchResults>0 && <ResultsWidget/>}
+            {this.displayResults()}
             
           </View>
           {/* {console.log("visible ? : "+ this.state.buttonVisible)} */}
