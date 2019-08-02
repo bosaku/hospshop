@@ -6,6 +6,7 @@ import SearchField from "../components/searchField";
 import LinkButton from "../components/linkButton";
 import { DatContext } from "../context/hospDataContext.js";
 import ProcedurePopup from "../components/procedurePopup";
+import ResultsWidget from "../components/resultsWidget"
 
 export default class Main extends Component {
 
@@ -65,6 +66,8 @@ export default class Main extends Component {
               modalClicked={this.modalClicked}
               displayButton={this.displayFindHospitalButton}
             />
+            {this.context.searchResults>0 && <ResultsWidget/>}
+            
           </View>
           {/* {console.log("visible ? : "+ this.state.buttonVisible)} */}
           {this.context.state.searchResults.length > 0 && <LinkButton url={"/results"} />}

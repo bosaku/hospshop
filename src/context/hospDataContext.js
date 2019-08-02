@@ -10,14 +10,14 @@ export class HospDataProvider extends React.Component {
     state = {
         loading:false,
         cptDat:"not yet loaded",
-        searchResults:""
+        searchTerm:"",
+        searchResults:"",
+        procedureModalClicked:false,
+        hospitalModalClicked:false
     }    
-
     
     componentDidMount() {
-        
         this.setState({cptDat: Dat})
-            
     }
 
     searchCPTCodes = (code) => {
@@ -31,12 +31,8 @@ export class HospDataProvider extends React.Component {
             return item.CodeDescription.toLowerCase().includes(desc);
           });
       
-          //console.log("context side : results for search ", desc, ": ", matches);
         
            this.setState({searchResults:matches})
-        //this.state.searchResults = matches;
-
-        
         
      }
 

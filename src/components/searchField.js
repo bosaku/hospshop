@@ -1,42 +1,49 @@
-import React, { useState } from "react";
-import { View, TextInput, Text, TouchableHighlight, Button } from "react-native";
+import React, { useState, useEffect } from "react";
+import {
+  View,
+  TextInput,
+  Text,
+  TouchableHighlight,
+  Button
+} from "react-native";
 import { DatContext } from "../context/hospDataContext.js";
 import "../App.css";
 
 ///Search through a google spreadsheet : https://github.com/Iwark/react-native-spreadsheet
 
-
 function SearchField(props) {
   // const [resultText, updateResultText] = useState("");
   const [searchText, updateSearchText] = useState("");
-  const [t,updateTimer] = useState("")
-  const [searching, updateSearching] = useState(false);
+  // const [t, updateTimer] = useState("");
+  // const [searching, updateSearching] = useState(false);
   const hospContextValue = React.useContext(DatContext);
   let dat = hospContextValue.state.cptDat;
 
   const { modalClicked } = props;
 
-  var timeout;
+  var lastSearchString;
 
-  var lastSearchString
+  useEffect(() => {
+    if(searchText.length <= 3 ) return
+    if (searchText === lastSearchString) return;
+
+    lastSearchString = searchText;
+
+    var timeout = setTimeout(() => {
+      console.log("running search")
+      hospContextValue.onSearch(searchText);
+      //   searchThroughDat(val)
+    }, 1000);
+    return () => clearTimeout(timeout);
+  }, [searchText]);
 
   const handleText = val => {
-    if (val.length < 4) return;
-    if(val === lastSearchString) return;
-
-    lastSearchString = val
-    // console.log("clear")
-    // clearTimeout(timeout);
-    // timeout = setTimeout(()=>{
-      hospContextValue.onSearch(val)
-    //   searchThroughDat(val)
-    // }, 1000);
-      updateSearchText(val);
+    updateSearchText(val);
   };
 
-  const updateSearchField =() =>{
-    return searchText
-  }
+  const updateSearchField = () => {
+    return searchText;
+  };
 
   if (hospContextValue.state.searchResults.length <= 0)
     return (
@@ -59,44 +66,48 @@ function SearchField(props) {
       </View>
     );
   else {
-    
     return (
-      
       <View>
-        { props.displayButton()}
-      <Text className="inputFieldTitle">Procedure or Diagnosis Search</Text>
+        {props.displayButton()}
+        <Text className="inputFieldTitle">Procedure or Diagnosis Search</Text>
 
-      <View className="textInputBorder">
-        {/* <View className="horizontalFlexContainer"> */}
+        <View className="textInputBorder">
+          {/* <View className="horizontalFlexContainer"> */}
           <TextInput
             placeholder="Procedure Description Search"
             className="inputField"
             onChangeText={val => {
               handleText(val);
             }}
-               value={updateSearchField()}
+            value={updateSearchField()}
           />
 
-          {/* <Text>{'Number of matches : ' + hospContextValue.state.searchResults.length}</Text> */}
-          <Button 
+          <Button
             className="procedureSearchbarButton"
             onPress={modalClicked}
-            title={'Browse ' + hospContextValue.state.searchResults.length + ' Matches'}
-          >
-            {/* <Text>***</Text> */}
-            
-          </Button>
-          {/* <Text>text :{JSON.stringify(dat,null,2)}</Text> */}
-          {console.log('result object', hospContextValue.state.searchResults[0])}
-          <Text>{'Search term : "' + searchText + "\""} </Text>
+            title={
+              "Browse " +
+              hospContextValue.state.searchResults.length +
+              " Matches"
+            }
+          />
+
+          {/* {console.log(
+            "result object",
+            hospContextValue.state.searchResults[0]
+          )} */}
+          <Text>{'Search term : "' + searchText + '"'} </Text>
           <Text>Description : </Text>
-          <Text>{JSON.stringify(hospContextValue.state.searchResults[0].CodeDescription, null,2)}</Text>
-          
-          {/* {console.log("text : " + this.context)} */}
-        {/* </View> */}
+          <Text>
+            {JSON.stringify(
+              hospContextValue.state.searchResults[0].CodeDescription,
+              null,
+              2
+            )}
+          </Text>
+        </View>
       </View>
-    </View>
-    )
+    );
   }
 }
 export default SearchField;
