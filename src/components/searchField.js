@@ -26,7 +26,7 @@ function SearchField(props) {
     var timeout = setTimeout(() => {
       console.log("running search");
       context.onSearch(searchText);
-      //   searchThroughDat(val)
+      
     }, 1000);
     return () => clearTimeout(timeout);
   }, [searchText]);

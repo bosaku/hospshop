@@ -1,5 +1,6 @@
 import React from "react";
 import Dat from "../supportingFiles/codesNdescriptions.json";
+import { match } from "minimatch";
 //http://www.convertcsv.com/csv-to-json.htm
 export const DatContext = React.createContext();
 
@@ -27,32 +28,42 @@ export class HospDataProvider extends React.Component {
   };
 
   searchByDescription = desc => {
-      console.log("beginning search by desc : " + desc)
+    console.log("beginning search by desc : " + desc);
     const matches = this.state.cptDat.filter(item => {
       return item.CodeDescription.toLowerCase().includes(desc.toLowerCase());
     });
-    this.setState({
-      searchResults: matches,
-      singleResult: matches[0]
-    });
 
-    console.log("Search completed by Context : ", matches);
+    if (matches.length > 0) {
+      console.log("Found matches ");
+      this.setState({
+        searchResults: matches,
+        singleResult: matches[0]
+      });
+    }
+    else 
+    {
+        console.log("Did not find matches ");
+    }
   };
 
   searchByCode = code => {
-    console.log("beginning search by desc : " + code)
-  const matches = this.state.cptDat.filter(item => {
-    return item.CPTCodes.toLowerCase().includes(code);
-  });
-  this.setState({
-    searchResults: matches,
-    singleResult: matches[0]
-  });
+    console.log("beginning search by desc : " + code);
+    const matches = this.state.cptDat.filter(item => {
+      return item.CPTCodes.toLowerCase().includes(code);
+    });
 
-  console.log("Search completed by Context : ", matches);
-};
+    if (matches.length > 0) {
+      console.log("Found matches ");
+      this.setState({
+        searchResults: matches,
+        singleResult: matches[0]
+      });
+    } else {
+      console.log("Did not find matches ");
+    }
+  };
 
-  openProcedureModal = (val) => {
+  openProcedureModal = val => {
     console.log("context clicked");
     // if ((this.procedureModalClicked = true))
     // {
@@ -67,8 +78,8 @@ export class HospDataProvider extends React.Component {
     //     procedureModalClicked: true
     //   });
     this.setState({
-        procedureModalClicked:val
-    })
+      procedureModalClicked: val
+    });
   };
 
   render() {
