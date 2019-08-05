@@ -1,63 +1,55 @@
-import React, { Component } from 'react';
-import Modal from './components/modalenhanced.js'
-import AjaxReq from './tools/ajaxreq.js'
+import React, { Component } from "react";
+import "./App.css";
 
-import {
-  StyleSheet,
-  View,
-  Platform,
-
-} from 'react-native';
-
+import { View, Platform, Text } from "react-native";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Main from "./views/main";
+import Info from "./components/info";
+import Results from "./views/results";
+// import {HospDataConsumer} from "./context/hospDataContext.js";
+///for dimensionality as context throughout app : https://medium.com/@505aaron/a-practical-react-native-problem-solved-with-the-context-api-eecaf2e05202
 
 class App extends Component {
- 
+  // state = {
+  //   modalVisible: false,
+  // };
+
+  // setModalVisible(visible) {
+  //   this.setState({modalVisible: visible});
+  // }
 
   render() {
- 
+    //let filterPercentage = 50;
 
     return (
-      <View style={styles.container}>
-        AjaxReq.FetchAndWait('https://api.github.com/users/chriscoyier/repos')
-        <Modal style={{flex:.3, }} ></Modal>
-        
+      <View>
+        {/* <HospDataConsumer> */}
+          <View>
+            <BrowserRouter>
+              <Switch>
+                <Route path="/" exact component={Main} />
+                <Route path="/results" exact component={Results} />
+                <Route path="/info" exact component={Info} />
+                <Route path="*" component={Main} />{" "}
+                {/*  misspelled routes will resolve to Main*/}
+              </Switch>
+            </BrowserRouter>
+          </View>
+        {/* </HospDataConsumer> */}
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  logo: {
-    width: 300,
-    height: 300,
-  },
-  title: {
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-  button: {
-    borderRadius: 3, 
-    padding: 20,
-    marginVertical: 10,
-    marginTop: 10,
-    backgroundColor: '#1B95E0',
-  },
-  buttonText: {
-    color: '#fff',
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-});
-
 let hotWrapper = () => () => App;
-if (Platform.OS === 'web') {
-  const { hot } = require('react-hot-loader');
+if (Platform.OS === "web") {
+  const { hot } = require("react-hot-loader");
   hotWrapper = hot;
 }
 export default hotWrapper(module)(App);
+
+// export default hotWrapper(module)(
+//   <HospDataProvider>
+//     <App />
+//   </HospDataProvider>
+// );
