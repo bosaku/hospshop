@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 import "../App.css";
 import CPTField from "../components/cptField";
 import SearchField from "../components/searchField";
-import LinkButton from "../components/linkButton";
+// import LinkButton from "../components/linkButton";
 import { DatContext } from "../context/hospDataContext.js";
 import ProcedurePopup from "../components/procedurePopup";
 import ResultsWidget from "../components/resultsWidget"
@@ -43,9 +43,14 @@ export default class Main extends Component {
   displayResults(){
     if(this.context.state.searchResults)
     return(
-      
       <ResultsWidget/>
     )
+    else if(this.context.state.searchFailed)
+    {
+      return(
+        <Text className={"textWLessPadding"}>This search has not returned any procedures.</Text>
+      )
+    }
   }
 
   render() {
@@ -75,7 +80,7 @@ export default class Main extends Component {
             
           </View>
           {/* {console.log("visible ? : "+ this.state.buttonVisible)} */}
-          {this.context.state.searchResults.length > 0 && <LinkButton url={"/results"} />}
+          
         </View>
       </View>
     );

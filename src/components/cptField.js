@@ -9,6 +9,7 @@ function CPTField (props){
   const [searchText, updateSearchText] = useState("");
   
   const context = React.useContext(DatContext);
+   const codeInput = React.createRef();
 
   var lastSearchString;
 
@@ -26,6 +27,12 @@ function CPTField (props){
     return () => clearTimeout(timeout);
   }, [searchText]);
 
+  useEffect(()=>{
+    console.log("clearcode changed")
+    if(context.state.clearCode)
+      this.codeInput.clear()
+  },[context.state.clearCode])
+
   const handleText = val => {
     context.state.searchTerm = val;
     updateSearchText(val);
@@ -37,6 +44,7 @@ function CPTField (props){
 
         <View className="textInputBorder">
           <TextInput
+            ref={comp => { this.codeInput = comp; }}
             maxLength={5}
             keyboardType='numeric'
             multiline={false}
