@@ -32,17 +32,25 @@
 }
 
 .inputField {
-  /* font-size: 30px; */
-  /* text-align: center; */
+  
   font-family: 'Spectral', serif;
   font-weight: lighter;
-  /* font-color: red; */
+  
   font-size: 18px;
   padding:.5em;
-  /* width:60px; */
-  /* left:a; */
+  
+  
 }
 
+.textWLessPadding {
+
+  font-family: 'Spectral', serif;
+  font-weight: lighter;
+  
+  font-size: 18px;
+  padding:.2em;
+  padding-left:.5em;
+}
 
 
 .procedureDescription {

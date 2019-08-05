@@ -12,12 +12,12 @@ function ResultsWidget(props) {
   const context = React.useContext(DatContext);
 
   const clickModal = () => {
-        context.procedureModOpen(true)
+    context.procedureModOpen(true)
     console.log("click modal")
   };
 
   return (
-    <View>
+    <View className="textInputBorder">
       <Button
         className="procedureSearchbarButton"
         // onPress={modalClicked}
@@ -28,13 +28,13 @@ function ResultsWidget(props) {
         }
       />
 
-      {console.log("result object", context.state.searchResults[0])}
-      <Text>
+      {/* {console.log("result object", context.state.searchResults[0])} */}
+      <Text className="textWLessPadding">
         {'Search term : "' + context.state.searchTerm + '"'}{" "}
       </Text>
-      <Text>Description : </Text>
-      <Text>
-        {JSON.stringify(
+      {/* <Text className="textWLessPadding">Description : </Text> */}
+      <Text className="textWLessPadding">
+        {'Description : ' + JSON.stringify(
           context.state.searchResults[0].CodeDescription,
           null,
           2

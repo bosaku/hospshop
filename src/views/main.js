@@ -56,10 +56,11 @@ export default class Main extends Component {
         </Text>
 
         <View className="verticalContainer">
+          {/* {console.log('render main ' , this.context.state.procedureModalOpen)} */}
           <ProcedurePopup
             title={this.context.procedureTitle}
             longDescription={this.state.procedureDescription}
-            modalVisible={this.context.state.procedureModalOpen}
+            // modalVisible={this.context.state.procedureModalOpen}
             modalClicked={this.modalClicked}
           />
 
