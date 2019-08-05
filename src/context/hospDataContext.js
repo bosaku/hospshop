@@ -29,7 +29,7 @@ export class HospDataProvider extends React.Component {
   searchByDescription = desc => {
       console.log("beginning search by desc : " + desc)
     const matches = this.state.cptDat.filter(item => {
-      return item.CodeDescription.toLowerCase().includes(desc);
+      return item.CodeDescription.toLowerCase().includes(desc.toLowerCase());
     });
     this.setState({
       searchResults: matches,
