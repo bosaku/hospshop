@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 
-import { View, Platform, Text } from "react-native";
+import { View, Platform } from "react-native";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Main from "./views/main";
 import Info from "./components/info";
@@ -10,13 +10,6 @@ import Results from "./views/results";
 ///for dimensionality as context throughout app : https://medium.com/@505aaron/a-practical-react-native-problem-solved-with-the-context-api-eecaf2e05202
 
 class App extends Component {
-  // state = {
-  //   modalVisible: false,
-  // };
-
-  // setModalVisible(visible) {
-  //   this.setState({modalVisible: visible});
-  // }
 
   render() {
     //let filterPercentage = 50;

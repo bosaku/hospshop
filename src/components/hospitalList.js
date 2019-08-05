@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, View, ListView, FlatList } from "react-native";
+import {  View, ListView, FlatList } from "react-native";
 import "../App.css";
 
  import HospitalListItem from "./hospListItem"

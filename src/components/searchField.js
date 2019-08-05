@@ -17,6 +17,8 @@ function SearchField(props) {
 
   var lastSearchString;
 
+  const searchInput = React.createRef();
+
   useEffect(() => {
     if (searchText.length <= 3) return;
     if (searchText === lastSearchString) return;
@@ -30,6 +32,12 @@ function SearchField(props) {
     }, 1000);
     return () => clearTimeout(timeout);
   }, [searchText]);
+
+  useEffect(()=>{
+    console.log("clear Desc called")
+    if(context.state.clearDesc)
+      this.searchInput.clear()
+  },[context.state.clearDesc])
 
   const handleText = val => {
     context.state.searchTerm = val;
@@ -45,7 +53,7 @@ function SearchField(props) {
           <TextInput
             placeholder="Enter a description"
             className="inputField"
-            
+            ref={comp => { this.searchInput = comp; }}
             onChangeText={val => {
               handleText(val);
             }}

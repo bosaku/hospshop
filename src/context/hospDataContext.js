@@ -1,6 +1,6 @@
 import React from "react";
 import Dat from "../supportingFiles/codesNdescriptions.json";
-import { match } from "minimatch";
+
 //http://www.convertcsv.com/csv-to-json.htm
 export const DatContext = React.createContext();
 
@@ -10,73 +10,103 @@ export class HospDataProvider extends React.Component {
   state = {
     loading: false,
     cptDat: "not yet loaded",
-    searchTerm: "",
     searchResults: "",
     singleResult: "",
+    resultIndex: 0,
+    searchFailed: false,
     procedureModalClicked: false,
-    hospitalModalClicked: false
+    hospitalModalClicked: false,
+    clearDesc:false,
+    clearCode:false
   };
 
   componentDidMount() {
     this.setState({ cptDat: Dat });
   }
 
-  searchCPTCodes = code => {
-    // const dat = require('../supportingFiles/cptCodesTransposedBeauty.json')
-    this.setState({ cptDat: "Hello" });
-    console.log("search cpt codes");
+  selectNext = () => {
+    if (this.state.searchResults === 0) return;
+
+    if (this.state.resultIndex < this.state.searchResults.length - 1)
+      this.state.resultIndex += 1;
+    else this.state.resultIndex = 0
+
+    this.setState({
+      singleResult: this.state.searchResults[this.state.resultIndex]
+    });
+
+  };
+
+  selectPrevious = () => {
+    if (this.state.searchResults === 0) return;
+
+    if(this.state.resultIndex > 0)
+        this.state.resultIndex -= 1;
+        else this.state.resultIndex = this.state.searchResults.length - 1
+
+    this.setState({
+      singleResult: this.state.searchResults[this.state.resultIndex]
+    });
   };
 
   searchByDescription = desc => {
-    console.log("beginning search by desc : " + desc);
+
+    // if(this.state.cptDat==null) return;
+
     const matches = this.state.cptDat.filter(item => {
       return item.CodeDescription.toLowerCase().includes(desc.toLowerCase());
     });
 
     if (matches.length > 0) {
-      console.log("Found matches ");
       this.setState({
         searchResults: matches,
-        singleResult: matches[0]
+        singleResult: matches[0],
+        // cptDat: matches[0].CPTCodes,
+        desc: matches[0].CodeDescription,
+        searchFailed:false,
+        clearCode:true,
+        clearDesc:false
       });
-    }
-    else 
-    {
-        console.log("Did not find matches ");
+    } else {
+      //console.log("Did not find matches ");
+      this.setState({
+          searchResults: null,
+          singleResult:null,
+          searchFailed:true
+      })
     }
   };
 
   searchByCode = code => {
-    console.log("beginning search by desc : " + code);
+
+    // if(this.state.cptDat==null) return;
+
     const matches = this.state.cptDat.filter(item => {
-      return item.CPTCodes.toLowerCase().includes(code);
+      return item.CPTCodes.includes(code);
     });
 
     if (matches.length > 0) {
-      console.log("Found matches ");
       this.setState({
         searchResults: matches,
-        singleResult: matches[0]
+        singleResult: matches[0],
+        // cptDat: matches[0].CPTCodes,
+        desc: matches[0].CodeDescription,
+        searchFailed:false,
+        clearCode:false,
+        clearDesc:true
       });
     } else {
-      console.log("Did not find matches ");
+        this.setState({
+            searchResults: null,
+          singleResult:null,
+            searchFailed:true
+        })
+    //   console.log("Did not find matches ");
     }
   };
 
   openProcedureModal = val => {
     console.log("context clicked");
-    // if ((this.procedureModalClicked = true))
-    // {
-    // console.log("false")
-    //   this.setState({
-    //     procedureModalClicked: false
-    //   });
-    // }
-    // else
-    // console.log("true")
-    //   this.setState({
-    //     procedureModalClicked: true
-    //   });
     this.setState({
       procedureModalClicked: val
     });
@@ -90,7 +120,9 @@ export class HospDataProvider extends React.Component {
           state: this.state,
           onSearch: this.searchByDescription,
           onCodeSearch: this.searchByCode,
-          procedureModOpen: this.openProcedureModal
+          procedureModOpen: this.openProcedureModal,
+          selectNext: this.selectNext,
+          selectPrevious: this.selectPrevious
         }}
       >
         {this.props.children}
