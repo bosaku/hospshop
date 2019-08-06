@@ -6,7 +6,7 @@
   font-size: 30px;
   text-align: center;
   position: relative;
-  top: 200px;
+  top: 100px;
   color: grey;
 }
 
@@ -118,11 +118,13 @@
 
   background-color: rgb(231, 231, 231);
   
-  align-items:center;
-  margin: 100; */
+  align-items:center;*/
+
+  margin:20px;
+  padding: 100; 
   align-items: center;
   justify-content: center;
-  top:250px;
+  top:160px;
 }
 
 

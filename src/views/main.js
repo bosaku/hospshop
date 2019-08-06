@@ -3,7 +3,6 @@ import { View, Text } from "react-native";
 import "../App.css";
 import CPTField from "../components/cptField";
 import SearchField from "../components/searchField";
-// import LinkButton from "../components/linkButton";
 import { DatContext } from "../context/hospDataContext.js";
 import ProcedurePopup from "../components/procedurePopup";
 import ResultsWidget from "../components/resultsWidget"
@@ -18,9 +17,6 @@ export default class Main extends Component {
 
   state = {
     procedureModalOpen: false,
-    // procedureTitle: "procedure title",
-    // procedureDescription: "procedure description",
-    
   };
 
   
@@ -29,14 +25,9 @@ export default class Main extends Component {
     if (!this.state.procedureModalOpen)
       this.setState({ procedureModalOpen: true });
     else this.setState({ procedureModalOpen: false });
-    // console.log("open modal? : " + this.state.procedureModalOpen);
   };
 
   displayFindHospitalButton(){
-    // console.log("visible ? : "+ this.state.buttonVisible)
-    // this.setState({
-    //   buttonVisible: true
-    // });
     this.buttonVisible =true;
   };
 
@@ -57,7 +48,7 @@ export default class Main extends Component {
     return (
       <View>
         <Text className="header">
-          FIND MEDICAL SERVICES BY CPT CODE OR DESCRIPTION
+          SEARCH FOR CATEGORY I CPT CODES
         </Text>
 
         <View className="verticalContainer">
